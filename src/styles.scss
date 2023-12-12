@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@800&display=swap");
+
 
 // Tailwind CSS
 @import "tailwindcss/base";
@@ -14,13 +14,11 @@
     src: url($font-file + ".ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    @if ($font-family == "Montserrat") {
+      font-weight: 800;
+    }
   }
 }
 
-@include font("Caveat-bold", "/assets/fonts/Caveat-Bold");
-@include font("Caveat-medium", "/assets/fonts/Caveat-Medium");
-@include font("Caveat-regular", "/assets/fonts/Caveat-Regular");
-@include font("Caveat-semi-bold", "/assets/fonts/Caveat-SemiBold");
-
-@include font("Young-heart", "/assets/fonts/Young-Heart");
 @include font("Cowboya-Bifurcated", "/assets/fonts/Cowboya-Bifurcated");
+@include font("Montserrat", "/assets/fonts/Montserrat");
