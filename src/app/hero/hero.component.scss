@@ -52,20 +52,25 @@
   opacity: 0;
 }
 
-.hero-pattern-title-top {
-  transform: rotate(180deg);
-  margin-bottom: 14px;
-}
-
 .hero-pattern-title-top,
 .hero-pattern-title-bottom {
+  width: 200px;
   filter: invert(88%) sepia(37%) saturate(1866%) hue-rotate(328deg)
     brightness(90%) contrast(113%);
+}
+
+.hero-pattern-title-bottom {
+  transform: rotate(180deg);
+}
+
+.hero-pattern-title-top {
+  margin-bottom: 14px;
 }
 
 .hero-pattern-title-star {
   margin-bottom: 16px;
   padding-top: 92px;
+  width: 100px;
 }
 
 .pattern-sheriff {
