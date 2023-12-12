@@ -1,0 +1,77 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh);
+  background-color: #fca7cc;
+
+  &__title {
+    position: relative;
+    font-family: "Young-heart";
+    font-family: "Cowboya-Bifurcated";
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 90%;
+    text-align: center;
+    color: #360602;
+    opacity: 0;
+    z-index: 100;
+  }
+
+  &__subtitle {
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 1em;
+    color: #360602;
+    opacity: 0;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+
+.pattern-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &.second {
+    right: 0;
+    transform: translateY(-25px);
+    opacity: 0.5;
+  }
+}
+
+.hero-pattern-title {
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.hero-pattern-title-top {
+  transform: rotate(180deg);
+  margin-bottom: 14px;
+}
+
+.hero-pattern-title-top,
+.hero-pattern-title-bottom {
+  filter: invert(88%) sepia(37%) saturate(1866%) hue-rotate(328deg)
+    brightness(90%) contrast(113%);
+}
+
+.hero-pattern-title-star {
+  margin-bottom: 16px;
+  padding-top: 92px;
+}
+
+.pattern-sheriff {
+  opacity: 0;
+}
+
+.pattern-cow {
+  filter: blur(1.7px);
+}

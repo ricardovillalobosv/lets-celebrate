@@ -1,0 +1,105 @@
+.date-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4ac9a;
+
+  &__bg {
+    position: absolute;
+    z-index: 50;
+    transform: translateX(50px);
+
+    &--pattern__l {
+      left: 0;
+      transform: rotate(180deg) translateX(50px);
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-family: "Montserrat";
+
+    &__title {
+      font-family: "Cowboya-Bifurcated";
+    }
+
+    &__first {
+      opacity: 0;
+    }
+
+    &__second {
+      opacity: 0;
+    }
+  }
+
+  &__line {
+    height: 50px;
+    width: 1px;
+    background-color: #fff;
+  }
+}
+
+.cactus-l {
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  width: 170px;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.cactus-r {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 130px;
+  opacity: 0;
+  transform: translateX(100px);
+}
+.whisky {
+  position: absolute;
+  left: 25px;
+  bottom: -20px;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.herradura {
+  position: absolute;
+  top: 20%;
+  width: 75px;
+  opacity: 0;
+  transform: translateX(-100px) rotate(-75deg);
+}
+.sheriff-i {
+  position: absolute;
+  bottom: 15%;
+  opacity: 0;
+  transform: translateY(100px) rotate(75deg);
+}
+.sombrero {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 180px;
+  opacity: 0;
+  transform: translateX(100px);
+}
+.cactus-l,
+.cactus-r,
+.whisky,
+.herradura,
+.sheriff-i,
+.sombrero {
+  z-index: 100;
+}
+
+.date-pattern-line {
+  filter: invert(111%) sepia(44%) saturate(1801%) hue-rotate(273deg)
+    brightness(33%) contrast(10%);
+}
