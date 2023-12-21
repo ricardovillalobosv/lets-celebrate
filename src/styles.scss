@@ -22,3 +22,8 @@
 
 @include font("Cowboya-Bifurcated", "/assets/fonts/Cowboya-Bifurcated");
 @include font("Montserrat", "/assets/fonts/Montserrat");
+
+.container {
+  overflow: hidden;
+  max-width: 430px;
+}
