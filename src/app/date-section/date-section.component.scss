@@ -20,11 +20,13 @@
   }
 
   &__detail {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     font-family: "Montserrat";
+    z-index: 100;
 
     &__title {
       font-family: "Cowboya-Bifurcated";
@@ -100,6 +102,6 @@
 }
 
 .date-pattern-line {
-  filter: invert(111%) sepia(44%) saturate(1801%) hue-rotate(273deg)
-    brightness(33%) contrast(10%);
+  filter: invert(0) sepia(11%) saturate(10%) hue-rotate(5deg) brightness(-30%)
+    contrast(80%);
 }
