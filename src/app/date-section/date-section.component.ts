@@ -59,6 +59,13 @@ export class DateSectionComponent implements OnInit {
         { delay: 0.2, duration: 0.8, easing: [0.17, 0.55, 0.55, 1] }
       );
     });
+    inView('.date-section__btn', (info) => {
+      animate(
+        info.target,
+        { opacity: 1, transform: 'none' },
+        { delay: 0.2, duration: 0.8, easing: [0.17, 0.55, 0.55, 1] }
+      );
+    });
     inView('.sombrero', (info) => {
       animate(
         info.target,
