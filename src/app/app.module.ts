@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterItemsComponent } from './pages/register-items/register-items.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LocationSectionComponent,
     HomeComponent,
     RegisterItemsComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
