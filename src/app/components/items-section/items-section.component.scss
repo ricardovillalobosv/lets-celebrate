@@ -1,0 +1,62 @@
+.items-section {
+  position: relative;
+  background-color: #e4ac9a;
+  &__pattern-bg {
+    position: absolute;
+    top: -75px;
+  }
+
+  &__bg {
+    position: absolute;
+    height: 100vh;
+    transform: rotate(180deg) translateX(50px);
+    z-index: 25;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 50;
+  }
+
+  &__title {
+    font-family: "Cowboya-Bifurcated";
+    position: relative;
+  }
+
+  &__table {
+    max-height: calc(100vh - 300px);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #83957e;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    &__text {
+      font-family: "Montserrat";
+      font-size: 14px;
+      color: white;
+    }
+  }
+}
+
+.items-whisky {
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  z-index: 60;
+  transform: rotate(35deg) scale(0.85);
+}
+
+.items-sheriff-i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 60;
+  transform: rotate(-35deg) scale(0.85);
+}

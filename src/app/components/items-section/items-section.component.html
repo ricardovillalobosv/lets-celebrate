@@ -1,0 +1,91 @@
+<section class="items-section min-h-screen">
+  <img class="items-section__pattern-bg" src="/assets/imgs/section-data-bg.png" alt="" />
+  <img
+    class="items-section__bg"
+    src="/assets/imgs/date-section-pattern-bg.png"
+    alt=""
+  />
+  <article class="items-section__container p-4">
+    <h1 class="items-section__title text-5xl text-[#360602] text-center mt-8">
+      Matricúlate
+    </h1>
+    <p class="text-center text-3xl -mt-2">🤣🥂</p>
+
+    <!-- <pre>{{ itemsSelected | json }}</pre> -->
+    <article
+      class="items-section__table relative overflow-x-auto shadow-md sm:rounded-lg mt-10"
+    >
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead class="text-xs text-white uppercase bg-[#83957e]">
+          <tr>
+            <th scope="col" class="p-4"></th>
+            <th scope="col" class="px-6 py-3">Producto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of items"
+            class="border-b bg-orange-100 dark:border-orange-200"
+          >
+            <td class="w-4 p-4">
+              <div class="flex items-center">
+                <input
+                  [(ngModel)]="item.check"
+                  (ngModelChange)="onSelection($event, item)"
+                  [disabled]="!!(item.check && !getCurrentSelectionLabel(item))"
+                  id="checkbox-table-search-1"
+                  type="checkbox"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label for="checkbox-table-search-1" class="sr-only"
+                  >checkbox</label
+                >
+              </div>
+            </td>
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+            >
+              {{ item.name }}
+
+              <span
+                *ngIf="item.check && !getCurrentSelectionLabel(item)"
+                class="bg-gray-100 text-gray-800 text-xs font-medium ms-2 px-2 py-0.5 rounded dark:bg-gray-300"
+                >Seleccionado</span
+              >
+              <!-- item.id === itemSelected.id -->
+              <span
+                *ngIf="getCurrentSelectionLabel(item)"
+                class="bg-gray-100 text-gray-800 text-xs font-medium ms-2 px-2 py-0.5 rounded dark:bg-orange-300"
+                >Tu selección</span
+              >
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template [ngIf]="loadingItems">
+        <div class="flex items-center justify-center gap-x-2 p-4 bg-orange-100">
+          <app-spinner></app-spinner>
+          <p>Cargando</p>
+        </div>
+      </ng-template>
+    </article>
+    <button
+      (click)="sendConfirmation()"
+      [disabled]="loadingConfirmation"
+      class="items-section__btn mx-auto mt-8"
+    >
+      <span class="items-section__btn__text text-[#360602]">
+        Confirmar asistencia
+      </span>
+      <app-spinner *ngIf="loadingConfirmation" class="ml-2"></app-spinner>
+    </button>
+  </article>
+
+  <img class="items-sheriff-i" src="/assets/imgs/sheriff-i.png" alt="" />
+  <img class="items-whisky" src="/assets/imgs/whisky.png" alt="" />
+</section>
+<!-- href="https://api.whatsapp.com/send?phone=+51972192608&text=Muchas%20gracias%20por%20la%20invitaci%C3%B3n.%20Estar%C3%A9%20presente%20%F0%9F%8E%82%F0%9F%A5%82"
+      target="_blank" -->

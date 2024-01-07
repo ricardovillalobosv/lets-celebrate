@@ -11,8 +11,9 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterItemsComponent } from './pages/register-items/register-items.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ItemsSectionComponent } from './components/items-section/items-section.component';
 
 
 @NgModule({
@@ -24,11 +25,13 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HomeComponent,
     RegisterItemsComponent,
     SpinnerComponent,
+    ItemsSectionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
