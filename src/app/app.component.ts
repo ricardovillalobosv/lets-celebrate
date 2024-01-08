@@ -16,6 +16,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   toPlay() {
-    this.playerRef.nativeElement.play();
+    this.playerRef.nativeElement
+      .play()
+      .then(() => {})
+      .catch(() => {
+        this.playerRef.nativeElement.play();
+      });
   }
 }
