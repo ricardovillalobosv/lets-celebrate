@@ -2,6 +2,6 @@
   <router-outlet></router-outlet>
 </main>
 <button #btn class="hidden" (click)="toPlay()">play</button>
-<audio #music class="hidden" [controls]="true" [muted]="false" [loop]="true">
+<audio #music [controls]="true" [muted]="false" [loop]="true">
   <source src="/assets/multimedia/music.mp3" type="audio/mp3" />
 </audio>
