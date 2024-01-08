@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TimelineDefinition, animate, timeline } from 'motion';
 
 @Component({
@@ -7,6 +7,8 @@ import { TimelineDefinition, animate, timeline } from 'motion';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
+  @ViewChild('music') playerRef: ElementRef<HTMLAudioElement>;
+
   ngOnInit(): void {
     animate(
       '.hero__img',
@@ -31,5 +33,10 @@ export class HeroComponent implements OnInit {
       ],
     ];
     timeline(sequence);
+  }
+
+  play() {
+    console.log('click');
+    this.playerRef.nativeElement.play();
   }
 }
