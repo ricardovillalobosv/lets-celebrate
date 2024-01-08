@@ -23,7 +23,15 @@ export class ItemsSectionComponent implements OnInit {
     this.loadingItems = true;
     try {
       this.itemsService.getItems().subscribe((items) => {
-        this.items = items;
+        this.items = items.sort((a: Item, b: Item) => {
+          if ((a?.name || '') < (b?.name || '')) {
+            return -1;
+          }
+          if ((a?.name || '') > (b?.name || '')) {
+            return 1;
+          }
+          return 0;
+        });
         this.loadingItems = false;
       });
     } catch (error) {
