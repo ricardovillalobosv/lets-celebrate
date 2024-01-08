@@ -8,6 +8,7 @@ import { TimelineDefinition, animate, timeline } from 'motion';
 })
 export class HeroComponent implements OnInit {
   @ViewChild('music') playerRef: ElementRef<HTMLAudioElement>;
+  playFlag: boolean = false;
 
   ngOnInit(): void {
     animate(
@@ -36,7 +37,12 @@ export class HeroComponent implements OnInit {
   }
 
   play() {
-    console.log('click');
-    this.playerRef.nativeElement.play();
+    if (!this.playFlag) {
+      this.playerRef.nativeElement.play();
+      this.playFlag = true;
+    } else {
+      this.playerRef.nativeElement.pause();
+      this.playFlag = false;
+    }
   }
 }

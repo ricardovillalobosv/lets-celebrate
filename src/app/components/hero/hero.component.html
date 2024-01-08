@@ -30,12 +30,23 @@
       alt="hero-pattern-title-bottom"
     />
 
-    <div class="relative flex mt-6 z-50">
+    <div class="relative flex mt-4 z-50">
       <button
         class="btn mx-auto flex justify-center items-center w-12 h-12 border-[2px] border-[#83957e] bg-[#83957e] rounded-[50%]"
         (click)="play()"
       >
-        <img class="w-4 ml-1" src="/assets/imgs/play-solid.svg" alt="play" />
+        <img
+          *ngIf="!playFlag"
+          class="w-4 ml-1"
+          src="/assets/imgs/play-solid.svg"
+          alt="play"
+        />
+        <img
+          *ngIf="playFlag"
+          class="w-4"
+          src="/assets/imgs/pause-solid.svg"
+          alt="play"
+        />
       </button>
       <audio
         #music
