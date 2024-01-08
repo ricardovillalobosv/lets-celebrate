@@ -1,13 +1,7 @@
 <main class="flex justify-center bg-[#212121]">
   <router-outlet></router-outlet>
 </main>
-<audio
-  class="hidden h-0"
-  #music
-  [controls]="true"
-  [autoplay]="true"
-  [muted]="false"
-  [loop]="true"
->
+<button #btn class="hidden" (click)="toPlay()">play</button>
+<audio #music class="hidden" [controls]="true" [muted]="false" [loop]="true">
   <source src="/assets/multimedia/music.mp3" type="audio/mp3" />
 </audio>

@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +7,15 @@ import {
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('music') playerRef: ElementRef<HTMLAudioElement>;
+  @ViewChild('btn') btn: ElementRef<HTMLButtonElement>;
 
   constructor() {}
 
   ngAfterViewInit(): void {
+    this.btn.nativeElement.click();
+  }
+
+  toPlay() {
     this.playerRef.nativeElement.play();
-    this.playerRef.nativeElement.volume = 0.25;
   }
 }
