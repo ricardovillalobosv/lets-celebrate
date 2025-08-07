@@ -54,7 +54,7 @@ export class ItemsSectionComponent implements OnInit {
   }
 
   private openURL() {
-    const url = `https://api.whatsapp.com/send?phone=+51972192608&text=Muchas%20gracias%20por%20la%20invitaci%C3%B3n.%20Estar%C3%A9%20presente%20%F0%9F%8E%82%F0%9F%A5%82`;
+    const url = `https://api.whatsapp.com/send?phone=+51999999999&text=Muchas%20gracias%20por%20la%20invitaci%C3%B3n.%20Estar%C3%A9%20presente%20%F0%9F%8E%82%F0%9F%A5%82`;
     const items = `${this.itemsSelected?.map((it) => it.name)?.join(',')}`;
     let fullUrl = '';
     if (this.itemsSelected.length !== 0)
